@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice AI App</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎙️ Voice AI App</h1>
+
+    <!-- TEXT TO SPEECH -->
+    <div class="card">
+        <h2>Text → Speech</h2>
+        <textarea id="textInput" placeholder="Enter text..."></textarea>
+        <button onclick="generateTTS()">Generate Voice</button>
+
+        <audio id="audioPlayer" controls></audio>
+        <a id="downloadBtn" download="voice.wav">Download</a>
+    </div>
+
+    <!-- SPEECH TO TEXT -->
+    <div class="card">
+        <h2>Speech → Text</h2>
+        <input type="file" id="audioFile">
+        <button onclick="uploadAudio()">Convert</button>
+
+        <p id="outputText"></p>
+    </div>
+</div>
+
+<script src="/frontend/script.js"></script>
+</body>
+</html>
