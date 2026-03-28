@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Form, UploadFile, File
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+import os
 
 from tts import generate_tts
 from stt import speech_to_text
@@ -34,3 +35,10 @@ async def stt_api(file: UploadFile = File(...)):
 
     text = speech_to_text(file_path)
     return {"text": text}
+
+
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
