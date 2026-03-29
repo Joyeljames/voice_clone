@@ -2,7 +2,7 @@ import requests
 import uuid
 import os
 from dotenv import load_dotenv
-
+from elevenlabs import generate, set_api_key
 load_dotenv()
 
 API_KEY = os.getenv("ELEVEN_API_KEY")
