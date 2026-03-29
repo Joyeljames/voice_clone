@@ -22,7 +22,7 @@ async def home():
 @app.post("/tts/")
 async def tts_api(text: str = Form(...)):
     output = generate_tts(text)
-    return FileResponse(output, media_type="audio/wav")
+    return FileResponse(output, media_type="audio/mpeg")
 
 
 # ✅ SPEECH → TEXT
