@@ -3,8 +3,8 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 import os
 
-from tts import generate_tts
-from stt import speech_to_text
+from backend.tts import generate_tts
+from backend.stt import speech_to_text
 
 app = FastAPI()
 
