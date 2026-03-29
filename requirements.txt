@@ -4,9 +4,10 @@ uvicorn==0.29.0
 transformers==4.36.2
 librosa==0.10.1
 soundfile==0.12.1
-sentencepiece
+sentencepiece==0.1.99
 
 python-multipart==0.0.9
 requests
 python-dotenv
-elevenlabs
+elevenlabs==0.3.2
+torch==2.3.1 
